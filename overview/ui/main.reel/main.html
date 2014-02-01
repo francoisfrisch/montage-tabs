@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Main</title>
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "main"}
+            }
+        },
+
+        "tabs": {
+            "prototype": "montage-tabs/ui/tabs.reel",
+            "properties": {
+                "element": {"#": "tabss"}
+            }
+        },
+
+        "example1": {
+            "prototype": "../example.reel",
+            "properties": {
+                "element": {"#": "example1"}
+            }
+        },
+
+        "example2": {
+            "prototype": "../example.reel",
+            "properties": {
+                "element": {"#": "example2"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="main" class="Main">
+        <h1>montage-tabs</h1>
+
+        <h2>Components</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Sample</th>
+                 </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td><a href="#">Example</a></td>
+                    <td style="position: relative">
+                        <div data-montage-id="tabss">
+                            <div data-arg="tabAlpha" data-montage-id="example1"></div>
+                            <div data-arg="tabBeta" data-montage-id="example2"></div>
+                        </div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

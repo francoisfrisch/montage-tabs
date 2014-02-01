@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="tabs.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "owner"},
+                "_content": {"@": "content"},
+                "_tabsController": {"@": "tabsController"}
+            }
+        },
+        "content": {
+            "prototype": "montage/ui/substitution.reel",
+            "properties": {
+                "element": {"#": "content"},
+                "switchValue": "blank"
+            },
+            "bindings": {
+                "switchValue": {"<-": "@tabsController.selection.length ? @tabsController.selection.one().key : 'blank'"}
+            }
+        },
+        "tabs": {
+            "prototype": "montage/ui/repetition.reel",
+            "properties": {
+                "element": {"#": "tabs"},
+                "contentController": {"@": "tabsController"},
+                "isSelectionEnabled": true
+            }
+        },
+        "tabsController": {
+            "prototype": "montage/core/range-controller"
+        },
+        "tabTitle": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "tabTitle"}
+            },
+            "bindings": {
+                "value": {"<-": "@tabs:iteration.object.displayName"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="Tabs">
+        <div class="Tabs-header">
+            <div class="Tabs-header-contents">
+                <div data-montage-id="tabs" class="Tabs-header-tabs" style="">
+                    <div class="Tabs-header-tab">
+                        <span data-montage-id="tabTitle" class="Tabs-header-tab-title" title=""></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-montage-id="content" class="Tabs-content">
+            <div data-arg="blank"></div>
+        </div>
+        <div class="resizer-widget"></div>
+    </div>
+</body>
+</html>

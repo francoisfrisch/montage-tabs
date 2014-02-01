@@ -1,0 +1,25 @@
+{
+    "name": "montage-tabs",
+    "version": "0.1.0",
+    "description": "A MontageJS component to create a tabbed ui.",
+    "dependencies": {
+        "montage": "git+http://github.com/montagejs/montage.git#master"
+    },
+    "devDependencies": {
+        "montage-testing": "0.3.0"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/francoisfrisch/splitter.git"
+    },
+    "license": "BSD",
+    "bugs": {
+      "url": "https://github.com/francoisfrisch/splitter/issues"
+    },
+    "exclude": [
+        "overview.html",
+        "overview",
+        "run-tests.html",
+        "test"
+    ]
+}
